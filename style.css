@@ -2,3 +2,173 @@
     font-family: Afacad;
     src: url(./fonts/Afacad/Afacad-VariableFont_wght.ttf);
 }
+
+img {
+    max-width: 2rem;
+    max-height: 2rem;
+    background: linear-gradient(#fff1f2, #fecdd3);
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Afacad, Arial, Helvetica, sans-serif;
+}
+
+svg {
+    max-width: 1.8rem;
+    fill: white;
+    padding-right: .3rem;
+}
+
+.container {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas: 
+        "sidebar navbar navbar"
+        "sidebar projects notifications";
+    background-color: #efeeee;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(#e11d48, #9f1239);
+    display: grid;
+    align-content: start;
+    color: white;
+    gap: 2rem;
+    padding: 1rem 1rem;
+}
+
+.sidebar-header {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+}
+
+.sidebar-links {
+    list-style-type: none;
+    display: grid;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    gap: 16px;
+}
+
+.sidebar-links>li {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+li>svg {
+    justify-self: end;
+}
+
+.header-icon {
+    max-width: 50px;
+}
+
+.navbar {
+    grid-area: navbar;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas: 
+    "searchbar account"
+    "greeting actions";
+    justify-content: start;
+    padding: 1rem 2rem;
+    row-gap: 1rem;
+    background-color: white;
+    box-shadow: 5px 5px 15px 2px #ADADAD;
+
+}
+
+.searchbar {
+    grid-area: searchbar;
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    border-radius: 25px;
+    height: 1.5rem;
+    background-color: #fff1f2;
+    border: 1px solid #fff1f2;
+    justify-self: stretch;
+    margin-right: 6rem;
+}
+
+#search-icon {
+    justify-self: end;
+}
+
+.account {
+    grid-area: account;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    font-weight: bolder;
+    justify-items: end;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.greeting {
+    grid-area: greeting;
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.greeting>img {
+    justify-self: end;
+}
+
+.actions {
+    grid-area: actions;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: end;
+    justify-content: end;
+}
+
+button {
+    border: 1px solid #e11d48;
+    padding: 12px 32px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 25px;
+    background-color: #e11d48;
+}
+
+#search-icon,
+#bell-icon {
+    fill: black;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.notifications {
+    grid-area: notifications;
+}
